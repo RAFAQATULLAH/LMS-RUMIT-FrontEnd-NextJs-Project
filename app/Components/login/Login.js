@@ -8,8 +8,8 @@ import { useState } from "react";
 const Login = () => {
   const [active,setActive]=useState("student")
   let router =useRouter()
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("abc");
+  const [password, setPassword] = useState("123");
   const handleLogin = (e) => {
     e.preventDefault(); // Prevents the page from refreshing
 
@@ -86,7 +86,7 @@ const Login = () => {
       </div>
       <div className="flex bg-gray-200 rounded-lg p-1 ">
         <button onClick={()=>{
-          setActive("teacher")
+          setActive("studentenroled")
          
         }}
           className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
