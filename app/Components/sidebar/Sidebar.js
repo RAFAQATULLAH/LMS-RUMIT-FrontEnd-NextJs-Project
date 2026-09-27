@@ -11,6 +11,7 @@ import {
   PlusSquare,
   Menu,
   X,
+  LogOut,
 } from "lucide-react";
 
 // Single definition of NavItem component
@@ -49,6 +50,7 @@ export default function Sidebar({ mobileOpen = false, setMobileOpen = () => {} }
     { label: "Attendance", href: "/attendance", icon: <User size={20} /> },
     { label: "Assignment", href: "/assignment", icon: <ShoppingCart size={20} /> },
     { label: "Quiz", href: "/quiz", icon: <PlusSquare size={20} /> },
+    { label: "LogOut", href: "/", icon: <LogOut size={20} /> },
   ];
 
   return (

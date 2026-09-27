@@ -14,6 +14,7 @@ const TeacherNav = () => {
     { name: 'Attendance', href: '/studentattendance' },
     { name: 'Assignments', href: '/studentassignments' },
     { name: 'Quizzes', href: '/studentquizes' },
+    {name: 'LogOut', href: '/'}
   ];
 
   return (

@@ -6,7 +6,6 @@ export default function FeeSection() {
   const [showHistory, setShowHistory] = useState(false);
   const [copiedId, setCopiedId] = useState(null);
 
-  // Fee data array (latest month first)
   const feeData = [
     {
       id: '202609771651',
@@ -42,23 +41,20 @@ export default function FeeSection() {
     },
   ];
 
-  // Copy Voucher ID to clipboard
   const handleCopy = (voucherId) => {
     navigator.clipboard.writeText(voucherId);
     setCopiedId(voucherId);
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  // Display either just the current month or all months
   const visibleFees = showHistory ? feeData : feeData.slice(0, 1);
 
   return (
-    <div className="w-full max-w-5xl font-sans text-white">
-      {/* Section Header with Arrow Toggle */}
+    <div className="w-full max-w-7xl mx-auto font-sans text-white">
+      {/* Section Header */}
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-xl font-semibold text-white">Fee</h2>
+        <h2 className="text-lg font-semibold text-white">Fee</h2>
         
-        {/* Toggle Previous Months Button */}
         <button
           onClick={() => setShowHistory(!showHistory)}
           className="flex items-center gap-2 text-xs font-medium text-gray-200 hover:text-white transition-colors bg-gray-800 hover:bg-gray-600 px-3 py-1.5 rounded-lg border border-gray-600"
@@ -77,12 +73,11 @@ export default function FeeSection() {
         </button>
       </div>
 
-      {/* Main Table Container with bg-gray-700 */}
+      {/* Main Table Container */}
       <div className="bg-gray-700 border border-gray-600 rounded-2xl overflow-hidden shadow-lg">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm text-gray-200 border-collapse">
             
-            {/* Table Header */}
             <thead>
               <tr className="text-gray-300 border-b border-gray-600 text-xs sm:text-sm">
                 <th className="py-4 px-6 font-medium">Month</th>
@@ -94,31 +89,21 @@ export default function FeeSection() {
               </tr>
             </thead>
 
-            {/* Table Rows */}
             <tbody className="divide-y divide-gray-600">
               {visibleFees.map((fee) => (
                 <tr key={fee.id} className="hover:bg-gray-600/50 transition-colors duration-150">
-                  {/* Month */}
                   <td className="py-4 px-6 text-white font-medium whitespace-nowrap">
                     {fee.month}
                   </td>
-
-                  {/* Amount */}
                   <td className="py-4 px-6 text-white font-medium whitespace-nowrap">
                     {fee.amount}
                   </td>
-
-                  {/* Type */}
                   <td className="py-4 px-6 text-gray-200 whitespace-nowrap">
                     {fee.type}
                   </td>
-
-                  {/* Due Date */}
                   <td className="py-4 px-6 text-gray-200 whitespace-nowrap">
                     {fee.dueDate}
                   </td>
-
-                  {/* Voucher ID with Copy Button */}
                   <td className="py-4 px-6 whitespace-nowrap">
                     <div className="flex items-center gap-2">
                       <span className="font-mono text-gray-200">{fee.id}</span>
@@ -139,8 +124,6 @@ export default function FeeSection() {
                       </button>
                     </div>
                   </td>
-
-                  {/* Status Badge */}
                   <td className="py-4 px-6 text-right sm:text-left whitespace-nowrap">
                     <span className="inline-block px-3 py-1 text-xs font-semibold text-emerald-400 border border-emerald-500/50 rounded-lg bg-emerald-500/10 tracking-wide">
                       {fee.status}
