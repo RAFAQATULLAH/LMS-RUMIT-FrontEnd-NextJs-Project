@@ -90,7 +90,7 @@ const Login = () => {
          
         }}
           className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
-              active === 'teacher' ? 'bg-white shadow text-[#0465d4]' : 'text-gray-600 hover:text-gray-900'
+              active === 'studentenroled' ? 'bg-white shadow text-[#0465d4]' : 'text-gray-600 hover:text-gray-900'
             }`}
           >Login as Teacher</button>
         <button onClick={()=>{
