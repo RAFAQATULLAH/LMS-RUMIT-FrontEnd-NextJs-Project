@@ -1,10 +1,10 @@
 "use client";
 
 
-import TeacherNav from "./teacherNavbar/TeacherNav";
+import TeacherNav from "../teacher/teacherNavbar/TeacherNav";
 
 
-export default function TeacherLayout({ children }) {
+export default function StudentAssignmentsLayout({ children }) {
 
 
   return (

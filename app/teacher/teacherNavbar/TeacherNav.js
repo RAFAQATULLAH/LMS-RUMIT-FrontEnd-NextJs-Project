@@ -19,7 +19,7 @@ const TeacherNav = () => {
   return (
     <header className="w-full text-white font-sans">
       {/* Top Main Section */}
-      <div className="bg-[#0051ae] px-4 py-5 sm:px-8">
+      <div className="bg-[#0a0f24] px-4 py-5 sm:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           
           {/* Title & Mobile Menu Toggle */}
@@ -54,7 +54,7 @@ const TeacherNav = () => {
       </div>
 
       {/* Navigation Bar */}
-      <div className="bg-[#0051ae] border-t border-white/20 rounded-b-2xl shadow-md">
+      <div className="bg-[#0a0f24] border-t border-white/20 rounded-b-2xl shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           
           {/* Desktop Links */}

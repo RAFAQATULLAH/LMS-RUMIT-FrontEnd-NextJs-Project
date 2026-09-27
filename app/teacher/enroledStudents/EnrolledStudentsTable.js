@@ -21,7 +21,7 @@ export default function EnrolledStudentsTable() {
   ];
 
   return (
-    <div className="w-full max-w-7xl font-sans text-white">
+    <div className=" w-full max-w-7xl font-sans text-white">
       {/* Main Table Container */}
       <div className="bg-gray-700 border border-gray-600 rounded-2xl overflow-hidden shadow-lg">
         <div className="overflow-x-auto">
@@ -76,7 +76,7 @@ export default function EnrolledStudentsTable() {
                   <td className="py-3.5 px-6 whitespace-nowrap text-center">
                     <button
                       title="View Student Details"
-                      className="p-1.5 rounded-lg text-gray-300 hover:text-white hover:bg-gray-600 transition-colors"
+                      className="p-1.5 rounded-lg text-gray-300 hover:text-white hover:bg-[#0a0f24] transition-colors"
                     >
                       <Eye className="w-5 h-5" />
                     </button>
